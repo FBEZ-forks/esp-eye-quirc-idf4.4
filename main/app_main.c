@@ -35,7 +35,7 @@ static void decode_task()
 
     uint16_t p_width = fb->width;
     uint16_t p_height = fb->height;
-    uint32_t p_len = fb->len;
+
 
     if (quirc_resize(q, p_width,p_height) < 0) {
         ESP_LOGE(TAG,"Failed to allocate video  memory\n");

@@ -13,6 +13,7 @@ The qr-code used to test the code is represented below.
 ![tested qr code](extra/tested_qr_code.png)
 
 * `86a4951`: working  
+* `d1c9c2c`: working
 
 ### Working log (86a4951)
 ```
@@ -78,6 +79,8 @@ In file included from /project/main/include/app_peripherals.h:8,
          int pin_sscb_scl __attribute__((deprecated("please use pin_sccb_scl instead")));           /*!< GPIO pin for camera SCL line (legacy name) */
              ^~~~~~~~~~~~
 ```
+
+But once changed as mentioned, everything works fine also in compilation. 
 
 ## Notes
 
