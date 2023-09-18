@@ -7,10 +7,12 @@ This example has been tested on an ESP-EYE with `OV3660` camera.
 
 This repo is to show where the esp32-camera components stops to work as expected.
 
-## Tested ESP32-Camera commits
+## Tested qr-code
 
 The qr-code used to test the code is represented below.
 ![tested qr code](extra/tested_qr_code.png)
+
+## Tested ESP32-Camera commits
 
 Tested commits of esp32-camera:
 * `86a4951`: working  
