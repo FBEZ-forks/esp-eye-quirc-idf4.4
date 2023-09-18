@@ -12,6 +12,11 @@ This repo is to show where the esp32-camera components stops to work as expected
 The qr-code used to test the code is represented below.
 ![tested qr code](extra/tested_qr_code.png)
 
+## Tested idf
+* idf v4.4
+* idf v5.1-rc2
+* idf v5.2
+
 ## Tested ESP32-Camera commits
 
 Tested commits of esp32-camera:
