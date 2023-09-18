@@ -12,6 +12,7 @@ This repo is to show where the esp32-camera components stops to work as expected
 The qr-code used to test the code is represented below.
 ![tested qr code](extra/tested_qr_code.png)
 
+Tested commits of esp32-camera:
 * `86a4951`: working  
 * `d1c9c2c`: working
 
