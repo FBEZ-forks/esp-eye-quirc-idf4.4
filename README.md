@@ -10,6 +10,8 @@ This repo is to show where the esp32-camera components stops to work as expected
 
 ## How to run with devcontainer
 
+Clone the repo with the recursive flag: `git clone --recursive https://github.com/FBEZ-forks/esp-eye-quirc-idf4.4.git`. Then:
+
 0. (if not already included) Install wsl2, restart the computer
 1. Install docker desktop
 2. Install vscode
