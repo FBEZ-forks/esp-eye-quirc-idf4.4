@@ -13,13 +13,14 @@ This repo is to show where the esp32-camera components stops to work as expected
 Clone the repo with the recursive flag: `git clone --recursive https://github.com/FBEZ-forks/esp-eye-quirc-idf4.4.git`. Then:
 
 0. (if not already included) Install wsl2, restart the computer
-1. Install docker desktop
-2. Install vscode
-3. Open vscode, open the extension tab (ctrl+shift+x), find and install the "remote development" extension. Restart vscode
+1. Install [docker desktop](https://www.docker.com/products/docker-desktop/)
+2. Install [vscode](https://code.visualstudio.com/download)
+3. Open vscode, open the extension tab (ctrl+shift+x), find and install the "remote development" extension (alternatively [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)). Restart vscode
 4. Open vscode, click ctrl+shift+p and start typing `Devcontainers: Rebuild and reopen in container`. Select it.
 
 The first time it need to download and install some docker images. When finished, the terminal inside the vscode is run inside a "virtual machine" (container) with all the tools already install. 
 
+Open a terminal by clicking ctrl+shift+p and start typing `create new Terminal`. It opens a terminal _inside_ the container.
 You can now `cd esp-eye-quirc-idf4.4` and run `idf.py build`. 
 
 Note: From inside the container is not easily possible to flash the firmware! You can check the last line from the compilation output 
