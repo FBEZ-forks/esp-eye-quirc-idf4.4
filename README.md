@@ -7,6 +7,34 @@ This example has been tested on an ESP-EYE with `OV3660` camera.
 
 This repo is to show where the esp32-camera components stops to work as expected.
 
+
+## How to run with devcontainer
+
+0. (if not already included) Install wsl2, restart the computer
+1. Install docker desktop
+2. Install vscode
+3. Open vscode, open the extension tab (ctrl+shift+x), find and install the "remote development" extension. Restart vscode
+4. Open vscode, click ctrl+shift+p and start typing `Devcontainers: Rebuild and reopen in container`. Select it.
+
+The first time it need to download and install some docker images. When finished, the terminal inside the vscode is run inside a "virtual machine" (container) with all the tools already install. 
+
+You can now `cd esp-eye-quirc-idf4.4` and run `idf.py build`. 
+
+Note: From inside the container is not easily possible to flash the firmware! You can check the last line from the compilation output 
+e.g.
+```
+/opt/esp/python_env/idf4.4_py3.8_env/bin/python ../../opt/esp/idf/components/esptool_py/esptool/esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/esp-eye-qrcode.bin
+```
+
+and use the same command entering the folder from the windows shell, if you have esptool installed:
+e.g.
+```
+esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/esp-eye-qrcode.bin
+```
+
+Otherwise you can flash using the flash tool with the files and offset mentioned in the line above. 
+
+
 ## Tested qr-code
 
 The qr-code used to test the code is represented below.
